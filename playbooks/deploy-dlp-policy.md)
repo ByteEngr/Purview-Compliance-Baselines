@@ -1,0 +1,20 @@
+Title: Deploy DLP Policy (Financial Data)
+Purpose: Deploy unified DLP policy to block external sharing of financial data
+
+Prereq:
+- Compliance admin / Exchange admin permissions
+- Understand which endpoints your tenant supports (Graph Beta vs Compliance REST)
+
+Steps:
+1) Retrieve current DLP policy list
+   GET https://graph.microsoft.com/beta/security/dlppolicies
+2) Create new DLP policy
+   POST https://graph.microsoft.com/beta/security/dlppolicies
+   Body: templates/DLP-Protect-Financials.json
+3) Assign policy to SharePoint/OneDrive/Exchange locations (add scope)
+4) Test policy using sample documents (see tests/sample-documents)
+5) Monitor incidents: GET https://graph.microsoft.com/beta/security/dlp/incidents
+
+Verification:
+- Policy appears in Compliance center
+- Test documents produce an incident (check incidents endpoint)
