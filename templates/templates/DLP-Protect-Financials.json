@@ -1,0 +1,17 @@
+{
+  "displayName": "DLP - Protect Financial Data",
+  "description": "Detect and block sharing of credit card and bank account numbers from OneDrive/SharePoint/Teams.",
+  "policyType": "UnifiedDlp",
+  "conditions": {
+    "contentContainsSensitiveInformation": [
+      { "type": "CreditCardNumber", "minCount": 1 },
+      { "type": "BankAccountNumber", "minCount": 1 }
+    ]
+  },
+  "actions": {
+    "block": true,
+    "notifyUser": true,
+    "applyLabel": "Confidential - Company",
+    "sendIncidentTo": "SecurityTeam"
+  }
+}
