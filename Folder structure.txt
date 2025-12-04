@@ -1,0 +1,20 @@
+Microsoft-Purview-Compliance-Baselines/
+├── README.md
+├── src/
+│   ├── Connect-Purview.ps1
+│   ├── Deploy-SensitivityLabel.ps1
+│   ├── Deploy-RetentionLabel.ps1
+│   ├── Deploy-DLPPolicy.ps1
+│   ├── Deploy-ClassificationRule.ps1
+│   └── Utilities.ps1
+├── templates/
+│   ├── Sensitivity-Confidential.json
+│   ├── Retention-7Years.json
+│   ├── DLP-Protect-Financials.json
+│   └── Classification-SSN-Pattern.json
+├── docs/
+│   ├── Baseline-Design.md
+│   └── Permissions.md
+└── tests/
+    ├── sample-documents/
+    └── run-sanity-tests.ps1
