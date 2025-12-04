@@ -1,0 +1,17 @@
+{
+  "displayName": "Confidential - Company",
+  "description": "Confidential data: encrypt and restrict external sharing.",
+  "isActive": true,
+  "settings": {
+    "contentMarking": {
+      "markingOptions": {
+        "addHeader": true,
+        "addFooter": true
+      }
+    },
+    "encrypt": {
+      "encryptWithUserDefinedRights": false,
+      "restrictExternalAccess": true
+    }
+  }
+}
