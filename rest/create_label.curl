@@ -1,0 +1,6 @@
+# Usage: export AZ_TOKEN="<access_token>" ; curl -H "Authorization: Bearer $AZ_TOKEN" -H "Content-Type: application/json" -d @templates/Sensitivity-Confidential.json "https://graph.microsoft.com/v1.0/informationProtection/policy/labels"
+curl -X POST \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d @templates/Sensitivity-Confidential.json \
+  "https://graph.microsoft.com/v1.0/informationProtection/policy/labels"
